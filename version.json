@@ -5,6 +5,7 @@
       "precision": "build"
     },
     "publicReleaseRefSpec": [
+      "^refs/heads/master$",
       "^refs/tags/v\\d+\\.\\d+\\.\\d+\\.\\d+"
     ],
     "nugetPackageVersion": {
