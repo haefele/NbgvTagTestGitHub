@@ -12,10 +12,10 @@ trigger:
       - v1.*
 
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'windows-2019	'
 
 steps:
-- script: printf '%s\n' "${!BUILD_SOURCEBRANCH}"
+- script: echo %BUILD_SOURCEBRANCH%
   displayName: 'Echo'
   
 - script: dotnet nbgv/nbgv.dll get-version
