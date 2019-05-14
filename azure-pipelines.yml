@@ -1,0 +1,22 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+  branches:
+    include:
+      - master
+  tags:
+    include:
+      - v1.*
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- script: dotnet nbgv/nbgv.dll get-version
+  displayName: 'Run a one-line script'
+
+- script: dotnet nbgv/nbgv.dll cloud
+  displayName: 'Run a one-line script'
