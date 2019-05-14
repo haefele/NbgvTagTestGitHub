@@ -15,6 +15,9 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
+- script: echo %BUILD_SOURCEBRANCH%
+  displayName: 'Echo'
+  
 - script: dotnet nbgv/nbgv.dll get-version
   displayName: 'Run a one-line script'
 
